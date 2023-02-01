@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      td {
+        border: 1px solid black;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        padding: 5px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tbody id="tbody"></tbody>
+    </table>
+  </body>
+  <script>
+    // let $tbody = document.getElementById("tbody");
+    // let $tr = document.createElement("tr");
+    // for (let i = 1; i < 10; i++) {
+    //   let textI = document.createTextNode(i + "단"); //text태그 생성
+    //   for (let j = 1; j < 10; j++) {
+    //     let $td = document.createElement("td"); //td태그 생성
+    //     let textJ = document.createTextNode(i + " x " + j + " = " + i * j); //text태그 생성
+    //     $td.appendChild(textJ); //td에 text태그 추가
+    //     $tr.appendChild($td); //tr에 td 추가
+    //     $td.appendChild(textI); //td에 text태그 추가
+    //   }
+
+    //   //debugger;
+    //   $tbody.appendChild($tr); //tr에 td를 추가
+    // }
+
+    let $tbody = document.getElementById("tbody");
+    for (let i = 1; i < 10; i++) {
+      let $tr = document.createElement("tr");
+      let textI = document.createTextNode(i + "단");
+      let $tdI = document.createElement("td");
+
+      $tdI.appendChild(textI);
+      $tr.appendChild($tdI);
+      $tbody.appendChild($tr);
+      for (let j = 1; j < 10; j++) {
+        let textJ = document.createTextNode(i + " x " + j + " = " + i * j);
+        let $tdJ = document.createElement("td");
+        $tdJ.appendChild(textJ);
+        $tr.appendChild($tdJ);
+        $tbody.appendChild($tr);
+      }
+    }
+  </script>
+</html>

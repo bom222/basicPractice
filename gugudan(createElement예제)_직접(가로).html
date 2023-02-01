@@ -47,17 +47,19 @@
 			*/
     };
 
-    let $tbody = document.getElementById("tbody");
+    let $tbody = document.getElementById("tbody"); // tbody라는 id를 가진 엘리먼트를 가져옴
 
     for (let i = 1; i < 10; i++) {
-      let $tr = document.createElement("tr"); //tr태그 생성
+      // i는 1단부터 9단까지 (단 수)
+      let $tr = document.createElement("tr"); // tr태그를 생성
       for (let j = 1; j < 10; j++) {
-        let $td = document.createElement("td"); //td태그 생성
-        let text = document.createTextNode(j + " x " + i + " = " + j * i); //text태그 생성
-        $td.appendChild(text); //td에 text태그 추가
+        // j는 1부터 9까지 (곱할값)
+        let $td = document.createElement("td"); //td태그를 생성
+        let text = document.createTextNode(j + " x " + i + " = " + j * i); //text를 생성
+        $td.appendChild(text); //td에 text태그 추가 (i단 x j   , 총 9까지 곱하니까 td를 9개 생성)
         $tr.appendChild($td); //tr에 td 추가
       }
-      $tbody.appendChild($tr); //tbody에 tr 추가
+      $tbody.appendChild($tr); //한 단 곱셈 계산이 끝났으면tbody에 tr 추가
     }
   </script>
 </html>

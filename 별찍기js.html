@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 별찍기연습
+    <br />
+    <br />
+    <br />
+    <br /> -->
+  </body>
+  <script>
+    // 사각형 별찍기
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5; j++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+
+    document.write("</br>");
+
+    //
+    // 왼쪽에 붙어 아래로 넓어지는 삼각형 별찍기
+
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j <= i; j++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+
+    document.write("</br>");
+
+    //
+    // 왼쪽에 붙어 아래로 좁아지는 삼각형 별찍기
+
+    // let num = prompt("몇단삼각형");
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5 - i; j++) {
+        // document.write(" ");
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+
+    document.write("</br>");
+
+    //
+    // 오른쪽에 붙어 아래로 넓어지는 삼각형 별찍기
+
+    // let num = prompt("몇단삼각형");
+    for (let i = 5; i < 0; i--) {
+      for (let j = 0; j < i; j++) {
+        // document.write(" ");
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+
+    document.write("</br>");
+    for (let i = 5; i > 0; i--) {
+      for (let j = 0; j < 5 - j == 5; j++) {
+        document.write("*");
+      }
+      document.write("</br>");
+    }
+    document.write("</br>");
+
+    // for (let i = 0; i < 1; i++) {
+    //   for (let j = 0; j < 5; j++) {
+    //     document.write("*".repeat(i) + " ".repeat(5 - j) + "</br>");
+    //   }
+    // }
+
+    // document.write("</br>");
+
+    // for (let i = 0; i < 5; i++) {
+    //   for (let j = 0; j < i; j++) {
+    //     document.write("*");
+    //   }
+    //   document.write("</br>");
+    // }
+
+    // document.write("</br>");
+
+    // for (let i = 0; i < 5; i++) {
+    //   document.write("*".repeat(5 - i));
+    // }
+
+    // document.write("</br>");
+
+    // for (let i = 1; i < 6; i++) {
+    //   document.write(" ".repeat(5 - i) + "*".repeat(i));
+    // }
+
+    // document.write("</br>");
+    // debugger;
+
+    for (let i = 1; i < 6; i++) {
+      document.write("&nbsp;".repeat(i) + "*".repeat(6 - i) + "</br>");
+      console.log(" ".repeat(i) + "*".repeat(6 - i));
+    }
+
+    // document.write("</br>");
+
+    // for (let i = 0; i < 9; i++) {
+    //   document.write();
+    // }
+
+    // debugger;
+
+    // 아래코드 잘못만든거. 수정해야함
+    // for (let i = 0; i < 5; i++) {
+    //   for (let j = 0; j < 5 - i; j++) {
+    //     for (let k = 0; k <= j - k; k++) {
+    //       document.write("&nbsp;");
+    //     }
+    //     document.write("*");
+    //   }
+    //   document.write("</br>");
+    // }
+  </script>
+</html>

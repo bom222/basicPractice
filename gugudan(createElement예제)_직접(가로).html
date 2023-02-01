@@ -30,23 +30,7 @@
       <tbody id="tbody"></tbody>
     </table>
   </body>
-  <script type="text/javascript">
-    window.onload = function () {
-      /*
-			for(var i = 1; i <= 9; i++){
-				var $tr = document.createElement("tr"); //tr태그 생성
-				for(var j = 1; j <= 9; j++){
-					var $td = document.createElement("td"); //td태그 생성
-					var text = document.createTextNode( j + "*" + i +"="+ j*i ); //text태그 생성
-					$td.appendChild(text); //td에 text태그 추가
-					$tr.appendChild($td);  //tr에 td 추가
-				}
-				var $tbody = document.getElementById("tbody");
-				$tbody.appendChild($tr); //tbody에 tr 추가
-			}
-			*/
-    };
-
+  <script>
     let $tbody = document.getElementById("tbody"); // tbody라는 id를 가진 엘리먼트를 가져옴
 
     for (let i = 1; i < 10; i++) {

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../css/reset.css"> -->
+  </head>
+  <style>
+    th,
+    td {
+      padding: 5px;
+      background: #eee;
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <div>
+      <h2>다음의 표를 자바스크립트 객체 배열(Object Array)로 만드시오</h2>
+      <table>
+        <thead>
+          <th>name</th>
+          <th>mineral</th>
+          <th>gas</th>
+          <th>supply</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script>
+      const arr = [
+        { name: "가가가", mineral: "50", gas: "0", supply: "1" }, //arr[0].name OR var str="name"; arr[0][str];
+        { name: "나나나", mineral: "150", gas: "0", supply: "2" }, //arr[1]
+        { name: "다다다", mineral: "75", gas: "25", supply: "2" }, //arr[2]
+        { name: "라라라", mineral: "100", gas: "50", supply: "2" }, //arr[3]
+        { name: "맘마맘마아따맘마", mineral: "150", gas: "100", supply: "2" }, //arr[4]
+      ];
+
+      let obj = ["name", "mineral", "gas", "supply"];
+
+      let $tbody = document.querySelector("tbody");
+      let $tr = document.createElement("tr");
+
+      // let strName = arr.name;
+      // let strMineral = arr.mineral;
+      // let strGas = arr.gas;
+      // let strSupply = arr.supply;
+      // 비효율적이니 구조분해할당으로 해주기. 아래코드!
+      const [name, mineral, gas, supply] = arr;
+
+      debugger;
+      for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j <= i; j++) {
+          let text = document.createTextNode(arr[i]);
+          let $td = document.createElement("td");
+          $td.appendChild(text);
+          $tr.appendChild($td);
+          $tbody.appendChild($tr);
+        }
+      }
+    </script>
+  </body>
+</html>

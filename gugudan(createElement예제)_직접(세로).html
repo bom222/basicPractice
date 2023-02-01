@@ -2,6 +2,18 @@
 <html>
   <head>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 1000px;
+        margin: 30px auto;
+      }
+      table {
+        width: 1000px;
+        border-collapse: collapse;
+      }
       td {
         border: 1px solid black;
         width: 100px;
@@ -9,29 +21,64 @@
         line-height: 30px;
         padding: 5px;
         text-align: center;
+        box-sizing: border-box;
+        background: #e7eeff;
+      }
+      td:first-child {
+        border-right: 2px solid #000;
+        background: #2765d1;
+        color: #fff;
+        font-weight: bold;
+      }
+      h1 {
+        text-align: center;
+        margin: 10px auto;
+      }
+      h1 span {
+        font-size: 1rem;
+        font-weight: normal;
       }
     </style>
   </head>
   <body>
-    <table>
-      <tbody id="tbody"></tbody>
-    </table>
+    <div>
+      <h1>구구단 표 <span>ver. 세로</span></h1>
+      <table>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
   </body>
   <script>
+    // let $tbody = document.getElementById("tbody");
+    // for (let i = 1; i < 10; i++) {
+    //   let $tr = document.createElement("tr");
+    //   let textI = document.createTextNode(i + "단");
+    //   let $tdI = document.createElement("td");
+
+    //   $tdI.appendChild(textI);
+    //   $tr.appendChild($tdI);
+    //   $tbody.appendChild($tr);
+    //   for (let j = 1; j < 10; j++) {
+    //     let textJ = document.createTextNode(i + " x " + j + " = " + i * j);
+    //     let $tdJ = document.createElement("td");
+    //     $tdJ.appendChild(textJ);
+    //     $tr.appendChild($tdJ);
+    //     $tbody.appendChild($tr);
+    //   }
+    // }
     let $tbody = document.getElementById("tbody");
     for (let i = 1; i < 10; i++) {
       let $tr = document.createElement("tr");
       let textI = document.createTextNode(i + "단");
-      let $tdI = document.createElement("td");
+      let $td = document.createElement("td");
+      $td.appendChild(textI);
+      $tr.appendChild($td);
 
-      $tdI.appendChild(textI);
-      $tr.appendChild($tdI);
-      $tbody.appendChild($tr);
       for (let j = 1; j < 10; j++) {
         let textJ = document.createTextNode(i + " x " + j + " = " + i * j);
-        let $tdJ = document.createElement("td");
-        $tdJ.appendChild(textJ);
-        $tr.appendChild($tdJ);
+        let $td = document.createElement("td");
+        $td.appendChild(textJ);
+        $tr.appendChild($td);
         $tbody.appendChild($tr);
       }
     }
